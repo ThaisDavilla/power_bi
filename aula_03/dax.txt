@@ -1,0 +1,29 @@
+Nova coluna
+
+Avaliacao Final = IF(Funcionarios[Avaliação do Funcionário] >= 7, "Satisfatorio", "Insatisfatorio" )
+Genero Inteiro = IF(Funcionarios[Genero] = "M", "Masculino", "Feminino")
+Salario com imposto = Funcionarios[Salario]*1.5
+Mes de Contratacao = MONTH(Funcionarios[Data de Contratacao]) 
+Gasto Salarial = Funcionarios[Salario com imposto] + Funcionarios[VR] + Funcionarios[VT]
+Idade = YEAR(TODAY()) - Funcionarios[Ano de Nascimento] 
+Ano de Nascimento = YEAR(Funcionarios[Data de Nascimento]) 
+
+https://learn.microsoft.com/pt-br/dax/statements-dax?authuser=0
+
+https://learn.microsoft.com/pt-br/dax/dax-function-reference?authuser=0
+
+
+
+Nova medida
+
+Gasto Salarial Total = SUM(Funcionarios[Gasto Salarial])
+Quantidade de Funcionarios = COUNTROWS(Funcionarios) - conta as linhas da tabela
+Quantidade de Areas = DISTINCTCOUNT(Funcionarios[Area]) 
+Media Salarial = AVERAGE(Funcionarios[Salario]) 
+
+Para alterar para estilo moeda:
+Clica no grafico
+Clica no nome da coluna
+Estilo moeda
+Aplica a moeda selecionada.
+
